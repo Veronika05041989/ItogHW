@@ -1,0 +1,20 @@
+; Задача: Написать программу, которая из имеющегося массива строк формирует 
+; новый массив из строк, длина которых меньше, либо равна 3 символам. 
+; Первоначальный массив можно ввести с клавиатуры, либо задать на старте 
+; выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, 
+; лучше обойтись исключительно массивами.
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.Clear();
+
+        Console.Write("Введите кол-во элементов массива: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        string[] array = new string[num];
+
+        Console.WriteLine($"Исходный массив: {string.Join(",\t ", CreateArray())}");
+        Console.WriteLine($"Конечный массив: {string.Join(",\t", NewArray(array))}");
+
+        
